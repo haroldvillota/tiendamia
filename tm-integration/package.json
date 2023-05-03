@@ -1,0 +1,25 @@
+{
+  "name": "integration",
+  "version": "1.0.0",
+  "description": "Integration tiendamia <> provider",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "Harold Villota",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.16.0",
+    "mongoose": "^6.10.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.2"
+  }
+}

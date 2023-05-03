@@ -1,0 +1,24 @@
+version: '3'
+services:
+
+  provider:
+    build: './tm-provider'
+    environment:
+      - PORT=10001
+    ports:
+      - '10001:10001'
+    command: ["npm","start"]
+
+  integration:
+    build: './tm-integration'
+    environment:
+      - PORT=10002
+      - API_PROVIDER_URL=http://provider:10001/api
+      - MONGO_HOST=sandbox.6iyqxoq.mongodb.net
+      - MONGO_USER=m001-student
+      - MONGO_PASSWORD=AxROPcp7ecCMkviA
+      - MONGO_DATABASE=integration_tiendamia
+    ports:
+      - '10002:10002'
+    command: ["npm","start"]
+    
