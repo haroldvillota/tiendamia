@@ -52,7 +52,7 @@ const service = {
 			return b.total_score - a.total_score
 		});
 
-		//console.log(offers);
+		console.log(offers);
 		//limpia los campos usados para el cálculo
 		offers.forEach(offer => {
 			delete offer.normalized_total_price;
@@ -68,7 +68,7 @@ const service = {
 		const theBest = offers.find(offer => {
 			return offer.stock > 0;
 		});
-		
+
 		return theBest;
 
 	},

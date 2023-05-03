@@ -23,10 +23,8 @@ const getBestOfferBySku = (req, res) => {
         const bestOffer = OffersService.getBestOffer(offers, parameters);
 
         if(bestOffer){
-
           res.json({ status: 'OK', data:bestOffer  });
         }else{
-          LogService.error(error, req);
           res.status(400).send({ error: `No offers for the sku ${sku}` });
         }
 
